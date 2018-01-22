@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CS373 - Week 2 Writeup</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/one-page-wonder.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation 
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Start Bootstrap</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sign Up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Log In</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+-->
+    <header class="masthead text-center text-white">
+      <div class="masthead-content">
+        <div class="container">
+          <h1 class="masthead-heading mb-0">Week 2 Writeup</h1>
+          <h2 class="masthead-subheading mb-0">DEFENSE AGAINST THE DARK ARTS - CS373 - Yu Ju Chang</h2>
+          <a href="about.html" class="btn btn-primary btn-xl rounded-pill mt-5">about</a>
+        </div>
+      </div>
+      <div class="bg-circle-1 bg-circle"></div>
+      <div class="bg-circle-2 bg-circle"></div>
+      <div class="bg-circle-3 bg-circle"></div>
+      <div class="bg-circle-4 bg-circle"></div>
+    </header>
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+			  <iframe width="560" height="315" src="https://www.youtube.com/embed/NHEt6nDzsfo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <h2 class="display-4">Forensics Investigation</h2>
+              <p>From this week’s video lecture we went over advanced forensics methods and tools that we can use to help us with forensics investigation. First we identify what scenarios or incidents would trigger a need for forensic investigation. </p>
+			  <p>Incidents of Fraud, Theft, Hacker Intrusion/ Data breaches, inappropriate use of Internet, Child Exploitation, civil or criminal litigation…etc are all cases that would trigger an need for forensic investigation. After these incidents occurred and the need for forensic investigation is required, evidence needs to be gathered quickly since we know the data in computer can be lost or overwritten as time goes on, however, the important first step before anything is done is to log down the TIME.</p>
+			  <p>Noting down the time the incidence occurred and the time when you performed any evidence acquisition will help you develop a timeline. This is very important. After the time is logged, then is the process of gathering the data. This can be classified into three broad methods.	
+				<ul style="list-style-type:circle">
+				<li><b>Live forensics:</b> while the computer is still on and live, gather data in running machine.</li>
+				<li><b>Post-mortem forensics:</b> gather data in the memory after it is removed from machine.</li>
+				<li><b>Network based forensics:</b> gather data from the network traffic, dealing with volatile and dynamic information.</li>
+				</ul>
+				Data that are normally not seen are collected and different tools can help acquire those data for analysis.
+				</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="p-1">
+             <h2 class="display-4">What are evidences and how are they collected?</h2>
+              <p>Evidences in computer forensics are considered mainly the data portion of the hardware. Since all hardware can store data in the memory so they can be found in locations like:</p>
+			  <ul style="list-style-type:circle">
+				<li>In networks- firewalls, IDS, routers</li>
+				<li>operating system- computer ram, hard drives</li>
+				<li>database and applications- software that are used and retain data or logs</li>
+				<li>removable media- cd, usb, external drives</li>
+				</ul>
+			  <p>To collect data in form of evidences for forensic investigation, there are rules that must apply. 
+<b>1. Minimize data loss if possible. 2. Record everything. 3. Analyze all data collected. 4. Report findings.</b> If any part of the rule is not followed, then the evidence may not get accepted in court and the case may get dismissed.
+			</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="p-8">
+              <h2 class="display-6">collection process:</h2>
+              <p>First mentioned, log the time and then we must always preserve the integrity of the evidence meaning that we should create a cryptographic hash of the disk. This can be seen like a unique signature and a copy of the original is 
+			  created for analysis since we do not want to alter or contaminate the original copy so all analysis is done on the copy and the copy’s signature must match the original to preserve the integrity of the evidence. After the copy is 
+			  obtained and verified, the original is locked away so they cannot be contaminated. If an evidence is contaminate, then let it stay contaminated because this will be considered as compromised evidence.</p>
+			  <h2 class="display-6">Order of collection</h2>
+			  <p>When collecting evidences, there is something called volatility to consider. Generally you would want to start from data that is more volatile to less volatile meaning data that can be lost quickly if we don’t get to it first. 
+			  So the order goes in from more volatile to less volatile as follows:</p>
+			  <ul style="list-style-type:circle">
+			    <li>System Memory: memory that is in RAM that will lost if system shutdown.</li>
+				<li>Temporary File Systems: ie. swap files and paging files.</li>
+				<li>Process Table & Network Connections: helpful process information that can be used shold be dumped</li>
+				<li>Network Routing Information & ARP Cache: This may help identify and match system that connect to it</li>
+				<li>Forensics Acquisition of Disks: Making image of the disk </li>
+				<li>Remote Logging & Monitoring Data: this helps seeing what is going on remotely</li>
+				<li>Physical configuration & network toplology: This help getting a whole view of connections</li>
+				<li>Backups: These are the less volatile and may contain good evidence</li>
+				</ul>
+            </div>
+          </div>
+		  <div class="col-lg-6">
+            <div class="p-8">
+              <img class="img-fluid rounded" src="img/location.jpg" alt=""> 
+			  <iframe width="560" height="315" src="https://www.youtube.com/embed/RzRChNO2mRA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+		  <div class="col-lg-6">
+            <div class="p-8">
+			  <h2 class="display-6">Where to collect?</h2>
+			  <p>Locations that needs data collections are: </p>
+			  <ul style="list-style-type:circle">
+				<li><b>Memory:</b> both virtual and physical memory should be dumped, these may contain very useful information.(ie. keystrokes, processes, usernames and passwords...etc)</li>
+				<li><b>Drives: </b>the whole physical hard disk should be imaged as well as the logical which is the partition of the drive should also be imaged as well. </li>
+				<li><b>Network traffic:</b> data from packet captures should be dumped since this can be useful for comparison to some data that can be used to prove it come from a system.</li>
+				</ul>
+			  <p>	</p>
+              <h2 class="display-6">Tools used:</h2>
+              <p>Tools that are used to aid in computer forensics are:</p>
+			  <ul style="list-style-type:circle">
+				<li><b>write blocker: </b> used as a one way access to read data from disk and prevent any data from being written on it.</li>
+				<li><b>FTK imager:  </b>used to create an image of digital evidence for analysis, this can even be used to perform search on the drive. </li>
+				<li><b>RegMon: </b>this is used to monitor registory activity </li>
+				<li><b>Reg-Ripper: </b> this is used to locate and access registry key nodes and data. translates data into readable form.</li>
+				<li><b>Photorec: </b> this is used to recover data.</li>
+				<li><b>Volatility:</b> this used for memory forensics.</li>
+				</ul>
+			  <p>	</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+			   <img class="img-fluid rounded" src="img/analyze.jpg" alt=""> 
+			   <img class="img-fluid rounded" src="img/volatility.jpg" alt=""> 
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <h2 class="display-4">Analysis</h2>
+              <p>The analysis of the data can be done using the tools mentioned before. Using reg-ripper we can easily locate the registry data and using 
+			  the tool to even translate data into readable strings. Using photorec, we can recover data that are deleted or not shown easily. Using volatility
+			  we can examine memory that we have dumped and see processes that were stored or run. Different tools can help us reveal a lot of information in the system,
+				for example, we can easily search for passwords that are stored.</p>
+			  <p>All of these tools are all used to perform similar functions which is to look for printable string, reconstruct the data structure in the memory, 
+			  and search for static signatures or kernel data. In addition to memory analysis, we are also interested in registry that are changed or created. 
+			  Because of the way windows system is designed, it will record and keep registry of what is modified and the time so this can help us identify applications 
+			  and their value. As we have learned about malwares, they want to survive system reboot so they will create a registry to allow the malware to automatically 
+			  run when the system is started up and by analyzing the registry we can search for the malware and see the modified times in correlation with other time stamped 
+			  files to develop a forensics timeline.</p>
+			</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+	<section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="p-5">
+              <img class="img-fluid rounded" src="img/challenge.jpg" alt="">
+			  <img class="img-fluid rounded" src="img/challenge2.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="p-5">
+              <h2 class="display-4">Week 2 Challenge Assignment</h2>
+              <p>This challenge assignment is very interesting, not only because we get to have hands on experience but this actually comes from a real case scenario. 
+			  We get to use the tools that were taught on how to mount the image and then using photorec to restore and pull those data out of the image. After that 
+			  we can go through and view the files that were inside as well as start using the tools to analyze what some data are. This is a great challenge and very 
+			  educational to learn new tools and applying them.</p>
+			</div>
+          </div>
+        </div>
+      </div>
+    </section>
+	
+	<section>
+      <div class="container">
+  <!--       <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <img class="img-fluid rounded-square" src="img/DADA.png" alt="">   
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">-->
+            <div class="p-5">
+              <h2 class="display-4">Conclusion</h2>
+              <p> In conclusion, this week’s lecture provided so much insightful information and knowledge regarding computer forensics. Not only did I learn about 
+			  what are the essential rules for investigation are and that is always log the time but also learned about how to use the tools and what data to look at.
+			  One new method that I believe will be helpful for me would definitely be learning about how to create the memory dumps and how to read them since we know
+			  memory in RAM store many important information but will be lost once the system is turned off so how to get those is very interesting and knowledgeable 
+			  to me. Overall, this week’s lecture have opened my mind about the field of computer forensics investigation and really interested in learning more about
+			  that field as a career choice.</p>
+			</div>
+  <!--         </div>
+       </div>-->
+      </div>
+    </section>
+	
+    <!-- Footer -->
+    <footer class="py-5 bg-black">
+      <div class="container">
+        <p class="m-0 text-center text-white small">Copyright &copy; Changyuj 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
