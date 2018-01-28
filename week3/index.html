@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CS373 - Week 3 Writeup</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/one-page-wonder.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation 
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Start Bootstrap</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sign Up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Log In</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+-->
+    <header class="masthead text-center text-white">
+      <div class="masthead-content">
+        <div class="container">
+          <h1 class="masthead-heading mb-0">Week 3 Writeup</h1>
+          <h2 class="masthead-subheading mb-0">DEFENSE AGAINST THE DARK ARTS - CS373 - Yu Ju Chang</h2>
+          <a href="about.html" class="btn btn-primary btn-xl rounded-pill mt-5">about</a>
+        </div>
+      </div>
+      <div class="bg-circle-1 bg-circle"></div>
+      <div class="bg-circle-2 bg-circle"></div>
+      <div class="bg-circle-3 bg-circle"></div>
+      <div class="bg-circle-4 bg-circle"></div>
+    </header>
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/-ONpqqs0akU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <h2 class="display-4">Why would we need malware defense?</h2>
+              <p>To understand why would need defense against malwares, we need to know that in current digital world there are many malicious software lurking around.
+			  Therefore, from the lecture we first learn about malwares’ behavior. We first need to identify the attack vectors which is how does those threats get 
+			  into our system. After those threats get inside what does it do. From these two big questions, we can split the malwares’ behavior into four major 
+			  steps.</p>
+			  <p>
+				<ul style="list-style-type:circle">
+				<li><b>First contact:</b> This is the attack vectors, the source of where we can get the malware (ie. email, usb, pdf and untrusted website…etc).</li>
+				<li><b>Local Execution:</b> In this step, the threat has already been opened and it will try to execute by either trick the user to run it or use browser vulnerability or other way of attack.</li>
+				<li><b>Establish Presence:</b> After the execution of the malicious code, it will try to either download additional malware, propagate to other 
+				systems or use different ways to stay onto the system so it can stay alive from any detection or restarts.</li>
+				<li><b>Malicious Activity:</b> This would be the last step of the behavior where the malware is already running and it starts to perform it’s malicious behavior that it is designed to do 
+				(ie. steal information, adware, bot service…etc).</li>
+				</ul>
+				</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="p-5">
+              <img class="img-fluid rounded" src="img/behavior.jpg" alt="">
+			  <br><br><br>	<br><br><br>		  
+			  <img class="img-fluid rounded" src="img/layer.jpg" alt=""> 
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="p-5">
+              <h2 class="display-4">Defend against each stage</h2>
+              <p>For the <b>first contact</b> we can counter spam with anti-spam, network attacks with firewall, or check the site’s reputation, or we can encrypt our
+			  disk to prevent physical access attacks. There are many ways the user can take precaution from malicious attacks to the highest level but it would 
+			  greatly reduce user experience. </p>
+			  <p>If the user has accidently opened or accessed compromised files or websites, there are still preventions we can take for example, an executable file 
+			  would ask the user if they want to run it. This can serve as a warning sign that you should not run any unknown executable file so you can protect 
+			  yourself. During this <b>local execution </b>stage we would want to use any content filtering to filter our unknown files. If it is on a network, 
+			  we would want to use network IPS which stands for network intrusion prevention system or content filtering or scanning to prevent execution of malicious
+			  codes. If it is a file or code on the user system then we can use host IPS, anti-virus or whitelisting as another defense layer against execution of 
+			  malicious file or code. </p>
+			  <p>However, if the user has already executed the malicious file or the malicious code is already executed through some vulnerability in the file or 
+			  browser, then we are in the <b>establish presence</b> stage. In this stage there are another layer of defense we can put up to fight against the 
+			  malicious software which would be anti-virus, whitelisting or host IPS. If it is in the network, then we would use firewall, network IPS, IP, domain 
+			  and URL reputations to block out those malicious codes. </P>
+			  <p>Even if the system is in the <b>malicious activity</b> stage, the best form of defense on the system is still the anti-virus and/or prevent any data 
+			  loss by backing up your data and restore your system. If it is network based attack, then the best defense would still be a firewall or network IPS. </p>
+			  <p>By forming multiple layers of defense will make it that much harder for the malicious software from getting into your system and defend your system from any threats. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <img class="img-fluid rounded" src="img/Layered.jpg" alt="">  
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <h2 class="display-4">Develop a good defense</h2>
+              <p>All of the layers of defense that can be used to protect us from any malicious threats all have a common protocol which is to determine what is good 
+			  and what is bad. By developing the content rules for the content engine to interpret it and determine what is good or bad is a major key in the defense.
+			  How do you determine if a file is malicious or not? Here, we would need to use some tools like YARA, which is a tool that we can use to develop a list 
+			  of rules for it to run against the files we want. Generally we would want to find out what are common that is among the malicious files and then find 
+			  out the unique string that we can put in our rule so it will only filter out the bad files and not create any false positive on our system files. When 
+			  going through the suspecious files, we can always use google to look up if any of the unkonwn string match online and find out what they are if they are
+			  safe or not to decide to add to the rules. If we don't know where to start, we can always use YARA's auto generate a list of common string from the list
+			  of the malicious files for us as well but the rules it create is too big, we would need to go through them and narrow it down to more unique and lessand
+			  amount of rules since it would not be idea for the anti-virus company to use such a large list of rules because all AV companies wants to deploy updates 
+			  that are small and yet effective so the rules have to be as unique enough that it can capture the malware and small enough that user can accept, 
+			  otherwise the update size would be too big and take too long. So a good clear set of rules are very important so it can detect the malware on the machine 
+			  but also try to anticipate possible threats that may have come from same family of malware. However, we would still need to becareful of what files we open,
+			  what websites we visit and set up your network with filters, firewalls and your host system with anti-virus softwares so you can better defend against any threats.
+			   </p>
+			</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+	<section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="p-5">
+				<img class="img-fluid rounded" src="img/yara.jpg" alt=""> 
+				<br><br><br><br><br>
+				<img class="img-fluid rounded" src="img/cuckoo.jpg" alt=""> 
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="p-5">
+              <h2 class="display-4">Lab exercise</h2>
+              <p>Through this week’s lab, we learned how to use the yara tool and cuckoo tool. For the <b>yara</b> tool we learned how to use it to scan files using the 
+			  content rules we developed. We then apply those rules on system files to see if they will return any false positives, if there is then that means our 
+			  rules aren’t unique enough to only the malicious files. Using yara to scan files are very useful to find malicious files and remove them but there are 
+			  some draw backs as well, it can be subjected to some tricks used by the malicious tools to avoid detection like packers, portable executables or other 
+			  tricks. Another useful way to use yara is to scan the memory because in memory, the malware will have to unpack and strip away their layers of wrapper 
+			  that prevented them from being discovered.</p>
+			  <p>Another tool we used in the lab is <b>cuckoo</b>. Using cuckoo in the VM at first caused some errors to show up because cuckoo is a tool that is better run 
+			  in an environment that has a cuckoo host and the analysis VM will run those malware so the whole thing will be in an virtual network but since we are
+			  running it in our VM as the host it gave errors but we ignored it since the main thing we wanted is to see the log. The big useful function about cuckoo 
+			  is that it allows us to trace and follow the course of the malware execution to what it is trying to do, what files it created or opened, or where did 
+			  it modify data…etc. Using this we can even see a lot of things that happened in the background that the malware was downloading or executing that we did
+			  not observe or find using other tools.   </p>
+			</div>
+          </div>
+        </div>
+      </div>
+    </section>
+	
+	<section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <img class="img-fluid rounded-square" src="img/shield.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <h2 class="display-4">Conclusion</h2>
+              <p>In conclusion from this week’s lecture, I have learned a great deal about how the behaviors of the malicious software help us understand there are different
+			  stages in threat execution and from their behavior we can form a line of defense in each stage of security breach. I also find the lab to be extremely interesting
+			  and fun to develop our own rules by finding the strings or hex of the malware so we can isolate them from normal system files. I learned that in the AV defense industry, they 
+			  are not only developing defense against past and current threats but also anticipating for future defense against new threats and coming out with better
+			  and smarter ways to help us defend against threats.  </p>
+			</div>
+          </div>
+        </div>
+      </div>
+    </section>
+	
+    <!-- Footer -->
+    <footer class="py-5 bg-black">
+      <div class="container">
+        <p class="m-0 text-center text-white small">Copyright &copy; Changyuj 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
