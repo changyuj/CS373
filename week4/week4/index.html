@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CS373 - Week 4 Writeup</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/one-page-wonder.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation 
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Start Bootstrap</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sign Up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Log In</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+-->
+    <header class="masthead text-center text-white">
+      <div class="masthead-content">
+        <div class="container">
+          <h1 class="masthead-heading mb-0">Week 4 Writeup</h1>
+          <h2 class="masthead-subheading mb-0">DEFENSE AGAINST THE DARK ARTS - CS373 - Yu Ju Chang</h2>
+          <a href="about.html" class="btn btn-primary btn-xl rounded-pill mt-5">about</a>
+        </div>
+      </div>
+      <div class="bg-circle-1 bg-circle"></div>
+      <div class="bg-circle-2 bg-circle"></div>
+      <div class="bg-circle-3 bg-circle"></div>
+      <div class="bg-circle-4 bg-circle"></div>
+    </header>
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/vhRScF7uwMA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <h2 class="display-4">What is hacking?</h2>
+              <p>First to understand hacking, we can use a simple example that was presented in the lecture. A simple driving program that allows user to drive on 
+			  the road and then when it reach a split in the road, the program will be expecting the user to input a direction. The developer of the program may 
+			  design the program to expect a simple left or right as input, however, what happen when the user enter straight? This may have a few consequences 1. 
+			  Program crashes or 2. Program behaves in a way that allow user to gain control and go around the intended program. This is a vulnerability in the 
+			  program and an exploit that hackers can use to gain access to the program that the developer did not consider. So in short, by thinking out side of 
+			  the box, hackers can find vulnerabilities in a program and exploit that program for their purpose of either redirecting users, placing bugs, steal 
+			  information…etc. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="p-5">
+              <img class="img-fluid rounded" src="img/WinDbg.JPG" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="p-5">
+              <h2 class="display-4">WinDbg</h2>
+              <p>In the lecture, WinDbg is introduced as the main tool that is used for debugging applications, 
+			  it is a very useful tool for you to pause a program and see its step by step action, see all the memory address and what values are in 
+			  those memory address. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+	<section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="p-5">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/B56PXXA_a3E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="p-5">
+              <h2 class="display-4">Registers and Memory</h2>
+              <p>In a computer system the CPU uses assembly language that perform simple operations and since the CPU executes instructions so quick that they 
+			  need to have a location to store values and be able to perform operations on them quickly and thus, the memory registers are created to overcome 
+			  this. There are 8 registers in a computer system and they are <b> EAX, ECX, EDX, EBX, ESP, EBP, ESI </b> and <b> EDI. </b> These registers have 
+			  different purpose for example the ESP and EBP registers are called stack registers, they are used to point to the top and the bottom of the current
+			  function stack. (A stack is referred to stacking the value or address being stored on top of each other.) The ECX is usually used for counting or 
+			  counters. The ESI and EDI are called index registers and they are used to store pointers that holds the location of the source and destination of a 
+			  string operation. The EAX us a general purpose register and it the mostly used to store current return value of a function.</p>
+			</div>
+          </div>
+        </div>
+      </div>
+    </section>
+	
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <img class="img-fluid rounded" src="img/calc.JPG" alt="">  
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <h2 class="display-4">Lab Lessons</h2>
+              <p>We were given 3 lessons to try out with WinDbg. </p>
+			  <p>In lesson 1, we set a breakpoint and allow the debugger to run and let breakpoint to be triggered and we then learn to look at the location of the 
+			  address, we learn to look at the stack, how much space is allocated for the values on the stack and we learned how to look at the value that is on the 
+			  stack.</P>
+			  <p>In lesson 2, we learned how the stack works and to find vulnerability and exploit it. First we learned how to find the address of the instruction 
+			  in the calling function and find out how many arguments are passed to the function and learned how function declaration and call looks like. Next we 
+			  learned what registers contain attacker-controlled data and which point to attacker-controlled data. We then find out what is the address that contain 
+			  vulnerability and the size of the buffer. After finding all those information we can then trigger the vulnerability to see if we have control over the 
+			  eip register and then we can replace the address to go to the address where our shellcode is and execute our exploit.</p>
+			  <p>In lesson 3, we will explore the vulnerability in the heap. First we need to find the size of the heap and then we find where is the heap block 
+			  pointed to and then we can find the address. Next we can find the size of the freed element and then we filled it with string of the same size and 
+			  then we fill the heap so we can have an estimate of the location of our shellcode. Then we can pass in the address that will then run our exploits. </p>
+			</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+	<section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <img class="img-fluid rounded-square" src="img/update.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <h2 class="display-4">Conclusion</h2>
+              <p>In conclusion, I learned more detail of how the computer memory works and by exploring those memory we can use it to find vulnerability in the 
+			  system and therefore, allowing exploits to be executed. Before this week’s lecture, I never used WinDBG and now I feel like I have learned a new
+			  tool that teach me how to find vulnerability in a program. The lab lessons taught me so much about how to look at the memory and addresses and then 
+			  getting access to those registers to store or point to the address we want so it will execute the exploits. I think overall this lecture taught me the 
+			  importance of keeping your system updated so those vulnerabilities can fixed. </p>
+			</div>
+          </div>
+        </div>
+      </div>
+    </section>
+	
+    <!-- Footer -->
+    <footer class="py-5 bg-black">
+      <div class="container">
+        <p class="m-0 text-center text-white small">Copyright &copy; Changyuj 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
