@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CS373 - Week 5 Writeup</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/one-page-wonder.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation 
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Start Bootstrap</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sign Up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Log In</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+-->
+    <header class="masthead text-center text-white">
+      <div class="masthead-content">
+        <div class="container">
+          <h1 class="masthead-heading mb-0">Week 5 Writeup</h1>
+          <h2 class="masthead-subheading mb-0">DEFENSE AGAINST THE DARK ARTS - CS373 - Yu Ju Chang</h2>
+          <a href="about.html" class="btn btn-primary btn-xl rounded-pill mt-5">about</a>
+        </div>
+      </div>
+      <div class="bg-circle-1 bg-circle"></div>
+      <div class="bg-circle-2 bg-circle"></div>
+      <div class="bg-circle-3 bg-circle"></div>
+      <div class="bg-circle-4 bg-circle"></div>
+    </header>
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/yUiL_ejOCiE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			  <br>
+			  <iframe width="560" height="315" src="https://www.youtube.com/embed/jN34P4EdIUw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <h2 class="display-4">Rootkit vs Bootkit</h2>
+              <p>A rootkit is a malware that is designed to hid itself from being detected by the user and the system process. There are two modes in the system 
+			  the user mode and the kernel mode, the user mode consistent of applications, user mode drivers and windows API, so mainly the executables and DLL files.
+			  The kernel mode are the kernel mode drivers, file system drivers and operating system kernel so mainly the .sys files and the rootkits mainly resides 
+			  and act on these files. It is here in the kernel mode that the rootkit can act as a filter and hide files from being shown. </p>
+			<p>Bootkit does not need to hide since they modify the MBR (master boot record). The MBR are first read when we boot up the system so if the malicious code are there, 
+			it will be executed without us knowing and will already be in the processes. 
+			So the main difference between the two is that rootkit needs to hide while bootkit does not hide. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+	
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <img class="img-fluid rounded" src="img/Screen.png" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <h2 class="display-4">Debugging</h2>
+              <p>In the lecture we learned how we can do kernel debugging to find memory patterns and from following the pointers in the memory we can see if 
+			  they have been modified to point to another memory address.<br> Kernel debugging is the same as using debugging for any other program that you are 
+			  going through and looking at the code, but in our case, we are looking at the assembly code which will show us how the machine instructions are being 
+			  called and we can trace all the instruction of the operating system. So we start from the address that <b> Tuluka </b> has shown as suspicious and set
+			  a breakpoint and when it hits we can look at the call and see how it was called and we will notice an extra entry that intercepts the windows API and 
+			  we can look into the assembly code and see the instructions and by following through we will eventually see that it will take us back to the original 
+			  call and using that we can find the difference address and get the offset.   </p>
+			</div>
+          </div>
+        </div>
+      </div>
+    </section>
+	
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="p-5">
+              <img class="img-fluid rounded" src="img/tuluka.JPG" alt="">  
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="p-5">
+              <h2 class="display-4">Tuluka</h2>
+              <p>In the lecture, Tuluka is introduced as a tool that is used for checking if a file's address is being redirected or changed. 
+			  It is a very useful tool for you to see if a file is suspicious and it will highlight those files  and list its original address and the address that it is
+				currently pointing to as well as showing you the location of the suspicious file. However, we know that since those files are being redirected, we
+				won't be able to see those file if we were go to that file location. We would need to patch the address back to the original to see the file.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+	<section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="p-5">
+				<img class="img-fluid rounded" src="img/thread.JPG" alt=""> 
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="p-5">
+              <h2 class="display-4">Process and Threads</h2>
+              <p> A process can be seen as an object that contains one or more threads, it has an object table what lists and handles all other objects that is 
+			  relates or uses by this process. <br>
+			A thread can be seen as the smallest unit of execution within the operating system. So when a code is run, it is first converted into assembly and then machine 
+			code then placed into a memory and executed in cpu. Each thread has their own stack that has user mode and kernel stack and it is within this kernel stack that 
+			the rootkit takes control and use it to its purpose. Because the rootkit is able to go into the kernel and change the pointer of the original address that the 
+			kernel is supposed to point to and have it run the rootkit malware and then go back to the original address. <br>
+			So understanding the rootkit we can either find the thread in the process that it is running and terminate it or we can use debugger and find the address in memory 
+			that is changed and patch it with the original address so it is not being rerouted, this way the malware is still in memory but it will not be called.
+			</p>
+			</div>
+          </div>
+        </div>
+      </div>
+    </section>
+	
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <img class="img-fluid rounded" src="img/hidden.JPG" alt="">
+			  <br>
+			  <img class="img-fluid rounded" src="img/suspicious.JPG" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <h2 class="display-4">Lab Lessons</h2>
+              <p>In lab 1, we are using tuluka to see what files are suspicious. From that we just want to see a simple memory manipulation by the malware.</p>
+			  <p>In lab 2, we go into looking at the process memory and look at which process is hooked and is running the malware.</P>
+			  <p>In lab 3, we are using kernal debugging to the thread that is responsible for modifying the kernal and by looking into the assembly code instructions 
+			  we can trace the step by step and find the malicious code afterwards we can find the original address and patch it. </p>
+			  <p>In lab 4, we went over file content forging, which means that the malware can overwrite existing files and provide a clean <b>view</b> of the file for
+				the anti-virus software and avoid getting detection.</p>
+			  <p>In lab 5, we are analying the brazilian banker rootkit using winDBG and we see that it prevents security tools from loading.</p>
+			</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+	<section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <img class="img-fluid rounded-square" src="img/rootkit.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <h2 class="display-4">Conclusion</h2>
+              <p>In conclusion, I learned more detail regarding the windows system internals, how the windows x86 system internal work and why they are target for the 
+				rootkits. In addition to understanding how rootkits work, I also learned how processes work and the basics of threads and understand why how that leads
+				to the development of multi-core cpus since one cpu with one instruction pipeline would not be able to process more than one thread and hyperthreading 
+				does not work out when both threads needs the same math processor so multi-core is developed. Even though this lecture is a bit dry but it taught me a lot
+				of information and basics of windows system internals.</p>
+			</div>
+          </div>
+        </div>
+      </div>
+    </section>
+	
+    <!-- Footer -->
+    <footer class="py-5 bg-black">
+      <div class="container">
+        <p class="m-0 text-center text-white small">Copyright &copy; Changyuj 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
