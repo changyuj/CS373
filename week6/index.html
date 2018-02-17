@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CS373 - Week 6 Writeup</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/one-page-wonder.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation 
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Start Bootstrap</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sign Up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Log In</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+-->
+    <header class="masthead text-center text-white">
+      <div class="masthead-content">
+        <div class="container">
+          <h1 class="masthead-heading mb-0">Week 6 Writeup</h1>
+          <h2 class="masthead-subheading mb-0">DEFENSE AGAINST THE DARK ARTS - CS373 - Yu Ju Chang</h2>
+          <a href="about.html" class="btn btn-primary btn-xl rounded-pill mt-5">about</a>
+        </div>
+      </div>
+      <div class="bg-circle-1 bg-circle"></div>
+      <div class="bg-circle-2 bg-circle"></div>
+      <div class="bg-circle-3 bg-circle"></div>
+      <div class="bg-circle-4 bg-circle"></div>
+    </header>
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/Jt9lxEoWuYs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <h2 class="display-4">Why network security?</h2>
+              <p>First we know everyone now days are on the internet, we shop online, we check our email online, we communicate online, we search online, 
+				we socialize online. Almost everything we do are online but we didn't think about the dangers that lurks on the internet. Who will protect us from the 
+				dangers? how can we be protected? This is where the network security comes in, It can prevent we from entering dangerous websites, protect our traffic,
+ 				and protect our data...etc. 
+				To understand how we can be protected, we should know what threats there are. There are two types of threats, one is the threats that come in from the 
+				network which includes DDoS(Distributed Denial of Service), and network attacks like stack overflow. The other one is threats that came out that is on 
+				the network, these includes worms, botnets, network resource thefts...etc. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+	
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <img class="img-fluid rounded" src="img/protection.jpg" alt="">   
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <h2 class="display-4">Protection</h2>
+              <p>So we have identified where and how the threats can reach us what's next? Next we start defining ways that protect our network.<br>
+				<ul style="list-style-type:circle"> 
+				 <li><b>Positive policy :</b> by having a strong policy that you are expecting  and allows  in your network or denies things that you don't want on your network.</li>
+				 <li><b>Firewalls and security zones :</b> firewalls utilizes the policy to separate into zones in the network. This is a great way to filter your traffic.</li> 
+				 <li><b>defense in depth :</b> this is a way that you can protect yourself or your data in more layers and secure it.</li>
+				 <li><b>intrusion detection :</b> have software that detects unwanted behaviors on your system and stops it.</li>
+				 <li><b>quarantine :</b> this can protect your system by placing dangerous files or connections in a confined area.</li>
+				 <li><b>reputation :</b> this protects you from entering into networks with known or bad ratings.</li>
+				</ul>
+				<br>By utilizing all these strategies together in your system and network, we can have a safer and secure internet experience.</p>
+			</div>
+          </div>
+        </div>
+      </div>
+    </section>
+	
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="p-5">
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/Ua9bUqdjWBc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="p-5">
+              <h2 class="display-4">Man In the Middle</h2>
+              <p>Just as the title suggests, a man in the middle is the third person who is not involved in the exchange of data between two parties and 
+				that third person will intercept the data to either get the information, rewrite the data or block the data from being exchanged between the two parties. 
+				Man in the middle is a way to attack the network and it can be done through <b>ARP poisoning</b> which is by flooding the network with many ARP responses 
+				and then tricks the host into exchanging traffic with you instead of the real address. Another one is <b>TCP hijacking</b>, this is done through three ways 
+				of either injecting, deleting or change the packets in the traffic. 
+				<br>However, not all man in the middle are bad. A positive reason to have a man in the middle is <b>HTTP Proxy</b> that intercepts all your http traffic and it
+ 				will check for dangerous hosts, look for strange URLS, detect and remove malicious files before the traffic either goes out or comes into you. 
+				<b>Mail Proxy</b> works the same way as HTTP proxy other than it is filtering the mail network.  Another one is <b>SSL man in the middle</b> this utilizing 
+				a secure keys, certificates, and encryptions. So it depends on how you use it, man in the middle can be both for bad or for good.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+	<section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="p-5">
+			    <iframe width="560" height="315" src="https://www.youtube.com/embed/-bI0I-3cNGY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="p-5">
+              <h2 class="display-4">Recon</h2>
+              <p> There are two types of reconnaissance meaning the attacker that is performing observation of the network and coming up with a strategy to defeat your network.
+ 				<ul style="list-style-type:circle"> 
+				   <li><b>Active Reconnaissance :</b> this type of attacker does not know the address so they need to actively seek out the address or a 
+						machine that are vulnerable to attacks on the network. </li>
+				   <li><b>passive Reconnaissance:</b> This type of attacker is on the network and they have access to the data on the network, they can study
+ 						and learn of the data that is on the network.</li>
+				</ul>
+				<br>To defend against these recons we can develop a stronger policy, physically secure the network hardware, use log-correlation of IPS, SIEM or firewalls and use honeynets
+ 				to slow down the attacker.	</p>
+			</div>
+          </div>
+        </div>
+      </div>
+    </section>
+	
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+			    <img class="img-fluid rounded" src="img/robust.jpg" alt="">   
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <h2 class="display-4">Robustness Principle</h2>
+              <p>"Be liberal in what you accept, and conservative in what you send"<br> 
+				This is a very interesting concept introduced, it wants us to understand that the internet can be filled with many unknown errors either
+ 				unintentional or intentionally designed. However, we should design software that can be prepared to handle those errors. The last concept wants us to be 
+				careful of the stuff we send because the other hosts can have bad software that make it prone to exploits so we should have software that for example 
+				encrypts your data before leaving your system. </p>
+			</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+            <div class="p-5">
+              <h2 class="display-4">FireWall Exercise</h2>
+                  <img class="img-fluid rounded" src="img/firewall.jpg" alt="">  
+			</div>
+      </div>
+    </section>
+
+	<section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <img class="img-fluid rounded" src="img/lock.png" alt="">   
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <h2 class="display-4">Conclusion</h2>
+              <p>In conclusion for this week I feel like I have learned more in-depth of what it takes to really secure the network, how the software in the
+ 				system and the network help protect our traffic. Especially the robustness principle is a very simple line, however, it is a lot to take in and think about
+ 				and how that have shaped the design of our modern day network security. The lab exercises are very interesting to help me understand more about how to look
+ 				at the packet data. Overall, this lecture is very informative and really broadens my understanding of what it takes to have a secure network.</p>
+			</div>
+          </div>
+        </div>
+      </div>
+    </section>
+	
+    <!-- Footer -->
+    <footer class="py-5 bg-black">
+      <div class="container">
+        <p class="m-0 text-center text-white small">Copyright &copy; Changyuj 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
